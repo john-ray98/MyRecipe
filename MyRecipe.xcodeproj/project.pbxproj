@@ -14,6 +14,7 @@
 		72627D242A65EE3200F2BC41 /* MyRecipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72627D232A65EE3200F2BC41 /* MyRecipeTests.swift */; };
 		72627D2E2A65EE3200F2BC41 /* MyRecipeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72627D2D2A65EE3200F2BC41 /* MyRecipeUITests.swift */; };
 		72627D302A65EE3200F2BC41 /* MyRecipeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72627D2F2A65EE3200F2BC41 /* MyRecipeUITestsLaunchTests.swift */; };
+		72627D3D2A65FB9B00F2BC41 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72627D3C2A65FB9B00F2BC41 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		72627D292A65EE3200F2BC41 /* MyRecipeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyRecipeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72627D2D2A65EE3200F2BC41 /* MyRecipeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecipeUITests.swift; sourceTree = "<group>"; };
 		72627D2F2A65EE3200F2BC41 /* MyRecipeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecipeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		72627D3C2A65FB9B00F2BC41 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				72627D122A65EE3000F2BC41 /* MyRecipeApp.swift */,
+				72627D3C2A65FB9B00F2BC41 /* ViewModel.swift */,
 				72627D142A65EE3000F2BC41 /* ContentView.swift */,
 				72627D162A65EE3200F2BC41 /* Assets.xcassets */,
 				72627D182A65EE3200F2BC41 /* Preview Content */,
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72627D152A65EE3000F2BC41 /* ContentView.swift in Sources */,
+				72627D3D2A65FB9B00F2BC41 /* ViewModel.swift in Sources */,
 				72627D132A65EE3000F2BC41 /* MyRecipeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
