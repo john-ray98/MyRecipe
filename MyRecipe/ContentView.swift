@@ -44,7 +44,9 @@ struct URLImage: View {
 }
 
 struct ContentView: View {
-   @StateObject var viewModel = ViewModel()
+    @StateObject var viewModel = ViewModel()
+    @StateObject var model2 = Model2()
+    @State var mealIDs: [String] = []
     
     var body: some View {
         NavigationView {
@@ -65,7 +67,10 @@ struct ContentView: View {
             
             .navigationTitle("Desserts")
             .onAppear {
-                viewModel.fetch()
+               viewModel.fetch()
+            
+                
+                mealIDs = viewModel.dessertRecipe.map {$0.idMeal}
             }
         }
     }
