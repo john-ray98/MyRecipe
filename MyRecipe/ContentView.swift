@@ -80,22 +80,22 @@ struct DetailView: View {
     
     var body: some View {
         List {
-                if let mealDetail = mealDetailViewModel.mealDetails[mealID] {
-                    VStack(alignment: .leading) {
-                        Text(mealDetail.strMeal).font(.headline)
-                        Text(mealDetail.strCategory).font(.subheadline)
-                        Text(mealDetail.id)
-                        Text(mealDetail.strInstructions)
-                        Text(mealDetail.strIngredient1)
-                        Text(mealDetail.strIngredient2)
-                        Text(mealDetail.strIngredient3)
-                        Text(mealDetail.strIngredient4)
-                        Text(mealDetail.strIngredient5)
-                        if let ingredient6 = mealDetail.strIngredient6 {
-                            Text(ingredient6)
-                        }
-                    }
-                    VStack {
+            if let mealDetail = mealDetailViewModel.mealDetails[mealID] {
+                
+                Section {
+                    Text(mealDetail.strMeal).font(.headline)
+                    Text(mealDetail.strCategory).font(.subheadline)
+                    Text(mealDetail.id)
+                    Text(mealDetail.strInstructions)
+                }
+                Section {
+                    Text(mealDetail.strIngredient1)
+                    Text(mealDetail.strIngredient2)
+                    Text(mealDetail.strIngredient3)
+                    Text(mealDetail.strIngredient4)
+                    Text(mealDetail.strIngredient5)
+                    if let ingredient6 = mealDetail.strIngredient6 {
+                        Text(ingredient6)
                         if let ingredient7 = mealDetail.strIngredient7 {
                             Text(ingredient7)
                         }
@@ -123,61 +123,67 @@ struct DetailView: View {
                         if let ingredient15 = mealDetail.strIngredient15 {
                             Text(ingredient15)
                         }
-                        Text(mealDetail.strMeasure1)
                     }
-                    VStack {
-                        Text(mealDetail.strMeasure2)
-                        Text(mealDetail.strMeasure3)
-                        Text(mealDetail.strMeasure4)
-                        Text(mealDetail.strMeasure5)
-                        if let measure6 = mealDetail.strMeasure6 {
-                            Text(measure6)
-                        }
-                        if let measure7 = mealDetail.strMeasure7 {
-                            Text(measure7)
-                        }
-                        if let measure8 = mealDetail.strMeasure8 {
-                            Text(measure8)
-                        }
-                        if let measure9 = mealDetail.strMeasure9 {
-                            Text(measure9)
-                        }
-                        if let measure10 = mealDetail.strMeasure10 {
-                            Text(measure10)
-                        }
-                        if let measure11 = mealDetail.strMeasure11 {
-                            Text(measure11)
-                        }
-                    }
-                    VStack {
-                        if let measure12 = mealDetail.strMeasure12 {
-                            Text(measure12)
-                        }
-                        if let measure13 = mealDetail.strMeasure13 {
-                            Text(measure13)
-                        }
-                        if let measure14 = mealDetail.strMeasure14 {
-                            Text(measure14)
-                        }
-                        if let measure15 = mealDetail.strMeasure15 {
-                            Text(measure15)
-                        }
-                        // Display more details as needed
-                        
-                        // Optionally, use the URLImage view to show an image
-                        // URLImage(urlString: mealDetail.strMealThumb, data: nil)
-                        //     .frame(width: 130, height: 300)
-                        //     .background(Color.gray)
-                    }
-                    .padding()
                 }
+                
+                
+                Section {
+                    Text(mealDetail.strMeasure1)
+                    Text(mealDetail.strMeasure2)
+                    Text(mealDetail.strMeasure3)
+                    Text(mealDetail.strMeasure4)
+                    Text(mealDetail.strMeasure5)
+                    if let measure6 = mealDetail.strMeasure6 {
+                        Text(measure6)
+                    }
+                    if let measure7 = mealDetail.strMeasure7 {
+                        Text(measure7)
+                    }
+                    if let measure8 = mealDetail.strMeasure8 {
+                        Text(measure8)
+                    }
+                    if let measure9 = mealDetail.strMeasure9 {
+                        Text(measure9)
+                    }
+                    if let measure10 = mealDetail.strMeasure10 {
+                        Text(measure10)
+                    }
+                }
+                Section {
+                    if let measure11 = mealDetail.strMeasure11 {
+                        Text(measure11)
+                    }
+                    if let measure12 = mealDetail.strMeasure12 {
+                        Text(measure12)
+                    }
+                    if let measure13 = mealDetail.strMeasure13 {
+                        Text(measure13)
+                    }
+                    if let measure14 = mealDetail.strMeasure14 {
+                        Text(measure14)
+                    }
+                    if let measure15 = mealDetail.strMeasure15 {
+                        Text(measure15)
+                    }
+                }
+                
+                // Display more details as needed
+                
+                // Optionally, use the URLImage view to show an image
+                // URLImage(urlString: mealDetail.strMealThumb, data: nil)
+                //     .frame(width: 130, height: 300)
+                //     .background(Color.gray)
             }
-        .onAppear {
-            mealDetailViewModel.fetchDetails(for: [mealID])
-    }
+        }
+                    .padding()
+                
+                    .onAppear {
+                        mealDetailViewModel.fetchDetails(for: [mealID])
+                    }
         .navigationTitle("Meal Details")
         }
-    }
+}
+
 
 
 
