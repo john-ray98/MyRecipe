@@ -45,8 +45,6 @@ struct URLImage: View {
 
 struct ContentView: View {
     @StateObject var viewModel = ViewModel()
-  // @StateObject var model2 = Model2()
- //   @State var mealIDs: [String] = []
     
     var body: some View {
         NavigationView {
@@ -67,7 +65,6 @@ struct ContentView: View {
             .navigationTitle("Desserts")
             .onAppear {
                 viewModel.fetch()
-              // mealIDs = viewModel.dessertRecipe.map {$0.idMeal}
             }
         }
     }
@@ -75,7 +72,6 @@ struct ContentView: View {
 
 struct DetailView: View {
     let mealID: String
-//    @ObservedObject private var viewModel = MealDetailViewModel()
     @EnvironmentObject private var mealDetailViewModel: MealDetailViewModel
     
     var body: some View {
@@ -187,7 +183,7 @@ struct DetailView: View {
 
 
 
-// Sample MealDetail and MealDetailResponse structs to decode meal details
+// MealDetail and MealDetailResponse structs to decode meal details
 struct MealDetail: Codable, Identifiable {
     let idMeal: String
     let strMeal: String
@@ -255,7 +251,7 @@ struct MealDetail: Codable, Identifiable {
     let strMeasure28: String?
     let strMeasure29: String?
     let strMeasure30: String?
-    // Add more properties as needed
+    
     var id: String { idMeal } // Implement the Identifiable protocol by providing the id property
    }
 

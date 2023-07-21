@@ -164,35 +164,3 @@ class Model2: ObservableObject {
 }
 
 
-
-
-
-
-
-
-
-
-//class Model2: ObservableObject {
-//    @Published var instruction: [Instruction] = []
-//
-//    func fetch() {
-//        guard let url = URL(string: "https://themealdb.com/api/json/v1/1/lookup.php?i=MEAL_ID") else {
-//            return
-//        }
-//        let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
-//            guard let data = data, error == nil else {
-//                return
-//            }
-//            do {
-//                let instruction = try JSONDecoder().decode(Instruction.self, from: data)
-//                DispatchQueue.main.async {
-//                    self?.instruction = instruction.meals
-//                    }
-//                } catch {
-//                    print(error)
-//                }
-//            }
-//        task.resume()
-//        }
-//    }
-
